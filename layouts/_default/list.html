@@ -39,8 +39,8 @@
 
 {{/* related issue: https://github.com/gohugoio/hugo/issues/9003 */}}
 {{ $paginator := "" }}
-{{ if (.Param "paginate") }}
-  {{- $paginator = .Paginate $pages (.Param "paginate") }}
+{{ if .Site.Params.pagination.pagerSize }}
+  {{- $paginator = .Paginate $pages .Site.Params.pagination.pagerSize }}
 {{ else }}
   {{- $paginator = .Paginate $pages }}
 {{ end }}

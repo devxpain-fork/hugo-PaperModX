@@ -5,6 +5,7 @@ it aims at adding new features and improving code quality,
 makes it easier to read and modify by anyone with basic knowledge of Hugo and HTML.
 
 Features and changes:
+
 - Table of Contents (ToC) floating on the side
 - InstantClick integration
 - Social icons from [Simple Icons](https://simpleicons.org/)
@@ -20,7 +21,7 @@ By adding config:
 
 ```yaml
 params:
-  TocSide: 'left'  # or 'right'
+  TocSide: "left" # or 'right'
 ```
 
 ToC will float on the left/right side of the page.
@@ -29,7 +30,6 @@ You can take a look at how `'right'` feels like in [Installation | Update](https
 The ToC box is responsive, it only shows on the side when minimum screen size is 1440px.
 
 This feature is enabled on this site.
-
 
 ## InstantClick integration
 
@@ -54,7 +54,6 @@ so it has to give way to InstantCllick.
 
 This feature is enabled on this site.
 
-
 ## Give links an accent color.
 
 Though PaperModX is designed to be minimal, accent color is still essential.
@@ -74,19 +73,17 @@ by override the following css variables in `assets/css/extended/custom.css` of y
 }
 ```
 
-
 ## Customize pagniator size
 
 In section pages, if you want the paginator size be different from the
 [global config](https://gohugo.io/templates/pagination/#configure-pagination),
-you can add `paginate` in the frontmatter to customize.
+you can add `pagination.pagerSize` in the frontmatter to customize.
 
 ```yaml
 ---
-paginate: 10
+pagination.pagerSize: 10
 ---
 ```
-
 
 ## Menus external link
 
@@ -102,7 +99,6 @@ menu:
         external: true
 ```
 
-
 ## Highlight code with Chroma, no bullshit
 
 PaperMod uses highlight.js to highlight code blocks.
@@ -114,12 +110,12 @@ By default the themes are `github` for light and `dracula` for dark,
 you can change it by adding `chroma-light.css` and `chroma-dark.css`
 in site's `assets/css/lib` directory.
 
-
 ## Social icons from Simple Icons
 
 Add social icons with `-simple` suffix from [Simple Icons](https://simpleicons.org/).
 
 Available icons:
+
 - github-simple
 - rss-simple
 - telegram-simple
@@ -129,7 +125,6 @@ Available icons:
 The icons are moved from `layouts/partials/svg.html` to `data/svg.toml`,
 makes it easier to maintain, it's now possible to have an index page
 to show all the icons, check it out at: [Icons Preview](https://reorx.github.io/hugo-PaperModX/docs/icons_preview/)
-
 
 ## Opinionated UI enhancements
 

@@ -5,9 +5,7 @@ summary: 本文档描述 PaperModX 相比原版 PaperMod 增加的新功能和�
 weight: 1
 ---
 
-
 本文档描述 PaperModX 相比原版 PaperMod 增加的新功能和变化。
-
 
 ## Table of Contents (ToC) floating on the side
 
@@ -15,7 +13,7 @@ By adding config:
 
 ```yaml
 params:
-  TocSide: 'left'  # or 'right'
+  TocSide: "left" # or 'right'
 ```
 
 ToC will float on the left/right side of the page.
@@ -24,7 +22,6 @@ You can take a look at how `'right'` feels like in [Installation | Update](https
 The ToC box is responsive, it only shows on the side when minimum screen size is 1440px.
 
 This feature is enabled on this site.
-
 
 ## InstantClick integration
 
@@ -49,7 +46,6 @@ so it has to give way to InstantCllick.
 
 This feature is enabled on this site.
 
-
 ## Give links an accent color.
 
 Though PaperModX is designed to be minimal, accent color is still essential.
@@ -69,19 +65,17 @@ by override the following css variables in `assets/css/extended/custom.css` of y
 }
 ```
 
-
 ## Customize pagniator size
 
 In section pages, if you want the paginator size be different from the
 [global config](https://gohugo.io/templates/pagination/#configure-pagination),
-you can add `paginate` in the frontmatter to customize.
+you can add `pagination.pagerSize` in the frontmatter to customize.
 
 ```yaml
 ---
-paginate: 10
+pagination.pagerSize: 10
 ---
 ```
-
 
 ## Menus external link
 
@@ -97,12 +91,12 @@ menu:
         external: true
 ```
 
-
 ## Social icons from Simple Icons
 
 Add social icons with `-simple` suffix from [Simple Icons](https://simpleicons.org/).
 
 Available icons:
+
 - github-simple
 - rss-simple
 - telegram-simple
@@ -112,7 +106,6 @@ Available icons:
 The icons are moved from `layouts/partials/svg.html` to `data/svg.toml`,
 makes it easier to maintain, it's now possible to have an index page
 to show all the icons, check it out at: [Icons Preview](https://reorx.github.io/hugo-PaperModX/docs/icons_preview/)
-
 
 ## Opinionated UI enhancements
 

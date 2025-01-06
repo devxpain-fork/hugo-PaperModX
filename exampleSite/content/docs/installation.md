@@ -8,8 +8,8 @@ TocSide: left
 
 ## Intro
 
--   **We'll be using `yml/yaml` format for all examples down below, I recommend using `yml` over `toml` as it is easier to read.**
--   You can find any [YML to TOML](https://www.google.com/search?q=yml+to+toml) converters if necessary.
+- **We'll be using `yml/yaml` format for all examples down below, I recommend using `yml` over `toml` as it is easier to read.**
+- You can find any [YML to TOML](https://www.google.com/search?q=yml+to+toml) converters if necessary.
 
 ---
 
@@ -65,12 +65,12 @@ Or you can Download as Zip from Github Page and extract in your themes directory
 
 Direct Links:
 
--   [Master Branch (Latest)](https://github.com/reorx/hugo-PaperModX/archive/master.zip)
--   [v5.0](https://github.com/reorx/hugo-PaperModX/archive/v5.0.zip)
--   [v4.0](https://github.com/reorx/hugo-PaperModX/archive/v4.0.zip)
--   [v3.0](https://github.com/reorx/hugo-PaperModX/archive/v3.0.zip)
--   [v2.0](https://github.com/reorx/hugo-PaperModX/archive/v2.0.zip)
--   [v1.0](https://github.com/reorx/hugo-PaperModX/archive/v1.0.zip)
+- [Master Branch (Latest)](https://github.com/reorx/hugo-PaperModX/archive/master.zip)
+- [v5.0](https://github.com/reorx/hugo-PaperModX/archive/v5.0.zip)
+- [v4.0](https://github.com/reorx/hugo-PaperModX/archive/v4.0.zip)
+- [v3.0](https://github.com/reorx/hugo-PaperModX/archive/v3.0.zip)
+- [v2.0](https://github.com/reorx/hugo-PaperModX/archive/v2.0.zip)
+- [v1.0](https://github.com/reorx/hugo-PaperModX/archive/v1.0.zip)
 
 ### Finally ...
 
@@ -79,24 +79,26 @@ Add in `config.yml`:
 ```yml
 theme: "PaperModX"
 ```
+
 ### Method 4
 
- - Install [Go programming language](https://go.dev/doc/install) in your operating system.
+- Install [Go programming language](https://go.dev/doc/install) in your operating system.
 
- - Intialize your own hugo mod
+- Intialize your own hugo mod
 
 ```
 hugo mod init YOUR_OWN_GIT_REPOSITORY
 ```
 
- - Add PaperModX in your `config.yml` file
+- Add PaperModX in your `config.yml` file
 
 ```
 module:
   imports:
   - path: github.com/reorx/hugo-PaperModX
 ```
- - Update theme
+
+- Update theme
 
 ```
 hugo mod get -u
@@ -106,15 +108,15 @@ hugo mod get -u
 
 ## Quick Links
 
--   ### [Papermod - Features](../features)
+- ### [Papermod - Features](../features)
 
--   ### [Papermod - FAQs](../faq)
+- ### [Papermod - FAQs](../faq)
 
--   ### [Papermod - Variables](../variables)
+- ### [Papermod - Variables](../variables)
 
--   ### [Papermod - Icons](../icons)
+- ### [Papermod - Icons](../icons)
 
--   ### [ChangeLog](https://github.com/reorx/hugo-PaperModX/releases)
+- ### [ChangeLog](https://github.com/reorx/hugo-PaperModX/releases)
 
 ---
 
@@ -127,7 +129,7 @@ hugo mod get -u
 ```yml
 baseURL: "https://examplesite.com/"
 title: ExampleSite
-paginate: 5
+pagination.pagerSize: 5
 theme: PaperModX
 
 enableRobotsTXT: true
@@ -139,117 +141,117 @@ pygmentsUseClasses: true
 googleAnalytics: UA-123-45
 
 minify:
-    disableXML: true
-    minifyOutput: true
+  disableXML: true
+  minifyOutput: true
 
 params:
-    env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: ExampleSite
+  description: "ExampleSite description"
+  keywords: [Blog, Portfolio, PaperModX]
+  author: Me
+  # author: ["Me", "You"] # multiple authors
+  images: ["<link or path of image for opengraph, twitter-cards>"]
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  assets:
+    # disableFingerprinting: true
+    favicon: "<link / abs url>"
+    favicon16x16: "<link / abs url>"
+    favicon32x32: "<link / abs url>"
+    apple_touch_icon: "<link / abs url>"
+    safari_pinned_tab: "<link / abs url>"
+
+  label:
+    text: "Home"
+    icon: /apple-touch-icon.png
+    iconHeight: 35
+
+  # profile-mode
+  profileMode:
+    enabled: false # needs to be explicitly set
     title: ExampleSite
-    description: "ExampleSite description"
-    keywords: [Blog, Portfolio, PaperModX]
-    author: Me
-    # author: ["Me", "You"] # multiple authors
-    images: ["<link or path of image for opengraph, twitter-cards>"]
-    DateFormat: "January 2, 2006"
-    defaultTheme: auto # dark, light
-    disableThemeToggle: false
+    subtitle: "This is subtitle"
+    imageUrl: "<img location>"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: my image
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
 
-    ShowReadingTime: true
-    ShowShareButtons: true
-    ShowPostNavLinks: true
-    ShowBreadCrumbs: true
-    ShowCodeCopyButtons: false
-    disableSpecial1stPost: false
-    disableScrollToTop: false
-    comments: false
-    hidemeta: false
-    hideSummary: false
-    showtoc: false
-    tocopen: false
+  # home-info mode
+  homeInfoParams:
+    Title: "Hi there \U0001F44B"
+    Content: Welcome to my blog
 
-    assets:
-        # disableFingerprinting: true
-        favicon: "<link / abs url>"
-        favicon16x16: "<link / abs url>"
-        favicon32x32: "<link / abs url>"
-        apple_touch_icon: "<link / abs url>"
-        safari_pinned_tab: "<link / abs url>"
+  socialIcons:
+    - name: twitter
+      url: "https://twitter.com/"
+    - name: stackoverflow
+      url: "https://stackoverflow.com"
+    - name: github
+      url: "https://github.com/"
 
-    label:
-        text: "Home"
-        icon: /apple-touch-icon.png
-        iconHeight: 35
+  analytics:
+    google:
+      SiteVerificationTag: "XYZabc"
+    bing:
+      SiteVerificationTag: "XYZabc"
+    yandex:
+      SiteVerificationTag: "XYZabc"
 
-    # profile-mode
-    profileMode:
-        enabled: false # needs to be explicitly set
-        title: ExampleSite
-        subtitle: "This is subtitle"
-        imageUrl: "<img location>"
-        imageWidth: 120
-        imageHeight: 120
-        imageTitle: my image
-        buttons:
-            - name: Posts
-              url: posts
-            - name: Tags
-              url: tags
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
 
-    # home-info mode
-    homeInfoParams:
-        Title: "Hi there \U0001F44B"
-        Content: Welcome to my blog
+  editPost:
+    URL: "https://github.com/<path_to_repo>/content"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
 
-    socialIcons:
-        - name: twitter
-          url: "https://twitter.com/"
-        - name: stackoverflow
-          url: "https://stackoverflow.com"
-        - name: github
-          url: "https://github.com/"
-
-    analytics:
-        google:
-            SiteVerificationTag: "XYZabc"
-        bing:
-            SiteVerificationTag: "XYZabc"
-        yandex:
-            SiteVerificationTag: "XYZabc"
-
-    cover:
-        hidden: true # hide everywhere but not in structured data
-        hiddenInList: true # hide on list pages and home
-        hiddenInSingle: true # hide on single page
-
-    editPost:
-        URL: "https://github.com/<path_to_repo>/content"
-        Text: "Suggest Changes" # edit text
-        appendFilePath: true # to append file path to Edit link
-
-    # for search
-    # https://fusejs.io/api/options.html
-    fuseOpts:
-        isCaseSensitive: false
-        shouldSort: true
-        location: 0
-        distance: 1000
-        threshold: 0.4
-        minMatchCharLength: 0
-        keys: ["title", "permalink", "summary", "content"]
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
 menu:
-    main:
-        - identifier: categories
-          name: categories
-          url: /categories/
-          weight: 10
-        - identifier: tags
-          name: tags
-          url: /tags/
-          weight: 20
-        - identifier: example
-          name: example.org
-          url: https://example.org
-          weight: 30
+  main:
+    - identifier: categories
+      name: categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 20
+    - identifier: example
+      name: example.org
+      url: https://example.org
+      weight: 30
 # Read: https://github.com/reorx/hugo-PaperModX/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 # pygmentsUseClasses: true
 # markup:
@@ -288,15 +290,15 @@ ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
 cover:
-    image: "<image path/url>" # image path/url
-    alt: "<alt text>" # alt text
-    caption: "<text>" # display caption under cover
-    relative: false # when using page bundles set this to true
-    hidden: true # only hide on current single page
+  image: "<image path/url>" # image path/url
+  alt: "<alt text>" # alt text
+  caption: "<text>" # display caption under cover
+  relative: false # when using page bundles set this to true
+  hidden: true # only hide on current single page
 editPost:
-    URL: "https://github.com/<path_to_repo>/content"
-    Text: "Suggest Changes" # edit text
-    appendFilePath: true # to append file path to Edit link
+  URL: "https://github.com/<path_to_repo>/content"
+  Text: "Suggest Changes" # edit text
+  appendFilePath: true # to append file path to Edit link
 ---
 ```
 
