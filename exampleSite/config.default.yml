@@ -52,8 +52,13 @@ params:
       channel: reorx_share
       accentColor: "9077e1"
       limit: 20
+    giscus:
+      repo: devxpain-test/devxpain-test.github.io
+      repoId: R_kgDONmdYEw
+      category: General
+      category:Id: DIC_kwDONmdYE84ClwbR
   defaultCommentSystems:
-    remark42: true
+    giscus: true
 
   profileMode:
     enabled: false
